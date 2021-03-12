@@ -7,15 +7,20 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "monospace:size=10" };
 static const char dmenufont[]       = "monospace:size=10";
-static const char col_gray1[]       = "#222222";
-static const char col_gray2[]       = "#444444";
-static const char col_gray3[]       = "#bbbbbb";
-static const char col_gray4[]       = "#eeeeee";
-static const char col_cyan[]        = "#005577";
+
+//'Midoriya' Theme Colors
+static const char col_green1[]      = "#0c5b5d";
+static const char col_black1[]      = "#030200";
+static const char col_green3[]      = "#063233";
+static const char col_unsel[]       = "#01170d";
+static const char col_greensel[]    = "#187479";
+static const char col_white[]       = "#fffdfd";
+
+//Midoriya Theme
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
-	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
-	[SchemeSel]  = { col_gray4, col_cyan,  col_cyan  },
+	[SchemeNorm] = { col_green1, col_black1, col_unsel },
+	[SchemeSel]  = { col_greensel, col_green3,  col_green3  },
 };
 
 /* tagging */
@@ -56,7 +61,10 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
+
+//Midoriya Theme
+static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_black1, "-nf", col_green1, "-sb", col_green3, "-sf", col_greensel, NULL };
+
 static const char *termcmd[]  = { "st", NULL };
 
 static Key keys[] = {
