@@ -1,4 +1,4 @@
-#DWM
+# DWM
 Main complete branch is 'compiled'
 
 ## Patches
