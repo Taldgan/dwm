@@ -7,15 +7,18 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "monospace:size=10" };
 static const char dmenufont[]       = "monospace:size=10";
-static const char col_gray1[]       = "#222222";
-static const char col_gray2[]       = "#444444";
-static const char col_gray3[]       = "#bbbbbb";
-static const char col_gray4[]       = "#eeeeee";
-static const char col_cyan[]        = "#005577";
+
+//Nord Theme colors
+static const char col_graybg[] = "#3b4252"; /* gray background */
+static const char col_iceblue[] = "#81a1c1"; /* blue - default blue?  */
+static const char col_iceblue2[] = "#738fac"; /* blue - default blue?  */
+static const char col_icecyan[] = "#88c0d0"; /* ice - selection?    */
+static const char col_icewhite[] = "#e5e9f0"; /* white   */
+
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
-	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
-	[SchemeSel]  = { col_gray4, col_cyan,  col_cyan  },
+	[SchemeNorm] = { col_icewhite, col_graybg, col_iceblue },
+	[SchemeSel]  = { col_icewhite, col_iceblue2, col_icecyan },
 };
 
 /* tagging */
@@ -56,7 +59,10 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
+
+//Nord Theme 
+static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_graybg, "-nf", col_icewhite, "-sb", col_iceblue2, "-sf", col_icewhite, NULL };
+
 static const char *termcmd[]  = { "st", NULL };
 
 static Key keys[] = {
