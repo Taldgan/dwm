@@ -210,6 +210,7 @@ static void resizeclient(Client *c, int x, int y, int w, int h);
 static void resizemouse(const Arg *arg);
 static void restack(Monitor *m);
 static void run(void);
+static void runAutostart(void);
 static void scan(void);
 static int sendevent(Client *c, Atom proto);
 static void sendmon(Client *c, Monitor *m);
@@ -1566,6 +1567,12 @@ run(void)
 }
 
 void
+runAutostart(void)
+{
+	system("cd ~; ./.dwm-start.sh &");
+}
+
+void
 scan(void)
 {
 	unsigned int i, num;
@@ -2584,6 +2591,7 @@ main(int argc, char *argv[])
 #endif /* __OpenBSD__ */
 	scan();
 	run();
+	runAutostart();
 	if(restart) execvp(argv[0], argv);
 	cleanup();
 	XCloseDisplay(dpy);
