@@ -8,22 +8,21 @@ Main complete branch is 'compiled'
 - dwm-statuscmd-signal-6.2
 - grid
 - winview
-- ome sort of gaps
+- rugaps (+deck)
 - noborder
-- spectresize
 - swallow
 - deck
-- dwm autostart
+- dwm autostart (slightly modified dwm autostart patch)
 - fakefullscreen
-- font changes
-- rules
+- font changes (Envy Code R for dmenu and dwm font)
+- rules	(floating windows and such)
 
 ## Themes
 Other theme(s) exist in patches (nordtheme/midoriyatheme branches)
 - nord theme (current in compiled)
 - midoriya theme
 
-##Control changes:
+## Control changes:
 
 Modkey assigned to 'super'/'windows key'
 
