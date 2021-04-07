@@ -25,6 +25,7 @@ static const char *colors[][3]      = {
 
 /* tagging */
 static const char *tags[] = { "t", "e", "e", "n", "k", "y", "D", "W", "M" };
+//static const char *tags[] = { "", "", "", "", "", "", " ", " ", "" };
 
 static const Rule rules[] = {
 	/* xprop(1):
