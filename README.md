@@ -1,4 +1,4 @@
-#DWM
+# DWM
 Main complete branch is 'compiled'
 
 ## Patches
@@ -27,9 +27,15 @@ Other theme(s) exist in patches (nordtheme/midoriyatheme branches)
 Modkey assigned to 'super'/'windows key'
 
 MOD+shift+q: closes window
+
 MOD+shift+e: exit dwm
+
 MOD+ctrl+shift+q: refresh dwm
+
 MOD+y: grid layout
+
 MOD+u: deck layout
+
 MOD+o: move to focused window (winview in '0' tag)
+
 MOD+r: dmenu
